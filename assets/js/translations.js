@@ -4,7 +4,7 @@ const KOTF_TRANSLATIONS = {
     nav_home: "Home", nav_forge: "The Forge", nav_gallery: "Gallery",
     hero_eyebrow: "Established MMXXIV",
     hero_title: "A Fellowship <br/>of the Flame.",
-    hero_intro: `We are a fellowship of men sharing our experiences to learn from each other. Guided by a Christian foundation, we gather on the first Saturday of every month for round-table reflections, coffee, and a barbecue, all under the spiritual leadership of <a href="https://share.google/TFc30xUs3B0I8WJFF" target="_blank" class="text-primary hover:text-primary-container transition-colors font-bold border-b border-primary/30">Pastor Epharin Wambu</a>.`,
+    hero_intro: `We are a fellowship of men sharing our experiences to learn from each other. Guided by a Christian foundation, we gather on the first Saturday of every month for round-table reflections, coffee, and a barbecue, all under the spiritual leadership of <a href="https://www.gscalicante.com/" target="_blank" class="text-primary hover:text-primary-container transition-colors font-bold border-b border-primary/30">Pastor Epharin Wambu</a>.`,
     calendar_title: "Gathering Calendar", calendar_subtitle: "Schedule of the Next Combustion",
     calendar_meeting: "Meeting", calendar_click_rsvp: "Click to RSVP",
     months: ["January","February","March","April","May","June","July","August","September","October","November","December"],
