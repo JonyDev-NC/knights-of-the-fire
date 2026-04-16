@@ -1,0 +1,216 @@
+---
+layout: default
+title: Home | Knights of the Fire
+---
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto space-y-32">
+<!-- Introduction Section -->
+<section class="max-w-4xl">
+<header class="space-y-6">
+<span class="label-md font-sans uppercase tracking-[0.3em] text-primary font-semibold">Established MMXXIV</span>
+<h1 class="text-6xl md:text-8xl font-extrabold tracking-tight leading-[0.9] text-on-surface">A Fellowship <br/>of the Flame.</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-2xl pt-4">
+    We are a fellowship of men sharing our experiences to learn from each other. Guided by a Christian foundation, we gather on the first Saturday of every month for round-table reflections, coffee, and a barbecue, all under the spiritual leadership of 
+    <a href="https://share.google/TFc30xUs3B0I8WJFF" target="_blank" class="text-primary hover:text-primary-container transition-colors font-bold border-b border-primary/30">Pastor Epharin Wambu</a>.
+</p>
+</header>
+</section>
+
+<!-- Gathering Calendar -->
+<section class="space-y-12" id="calendar-section">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="space-y-2">
+<h2 class="text-4xl font-bold tracking-tight">Gathering Calendar</h2>
+<p class="font-sans text-sm uppercase tracking-widest text-primary">Schedule of the Next Combustion</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 bg-surface-container-high rounded-md hover:bg-outline-variant transition-colors" onclick="changeMonth(-1)">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-3 bg-surface-container-high rounded-md hover:bg-outline-variant transition-colors" onclick="changeMonth(1)">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-low p-1 md:p-8 rounded-xl overflow-hidden">
+<h3 id="current-month-display" class="font-serif text-2xl mb-4 ml-2 font-bold text-primary"></h3>
+<div class="grid grid-cols-7 gap-px bg-outline-variant/20 rounded-lg overflow-hidden border border-outline-variant/15" id="calendar-grid">
+    <!-- Calendar will be populated by JS -->
+</div>
+</div>
+</section>
+
+<!-- Sigil Members -->
+<section class="space-y-16">
+<div class="text-center space-y-4">
+<h2 class="text-4xl font-bold tracking-tight">Vanguards of the Fire</h2>
+<div class="w-12 h-1 bg-primary mx-auto"></div>
+<p class="text-xs font-sans uppercase tracking-[0.2em] text-outline">Brothers who have tended the flame</p>
+</div>
+<div class="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center text-primary transition-transform group-hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-4xl" data-icon="shield">shield</span>
+</div>
+<div class="text-center">
+<p class="font-serif font-bold text-on-surface">Brother David</p>
+<p class="text-[10px] font-sans uppercase tracking-widest text-on-surface-variant">Active Knight</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center text-primary transition-transform group-hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-4xl" data-icon="swords">swords</span>
+</div>
+<div class="text-center">
+<p class="font-serif font-bold text-on-surface">Brother James</p>
+<p class="text-[10px] font-sans uppercase tracking-widest text-on-surface-variant">Active Knight</p>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 group">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center text-primary transition-transform group-hover:scale-105 duration-300">
+<span class="material-symbols-outlined text-4xl" data-icon="fort">fort</span>
+</div>
+<div class="text-center">
+<p class="font-serif font-bold text-on-surface">Brother John</p>
+<p class="text-[10px] font-sans uppercase tracking-widest text-on-surface-variant">Active Knight</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Barbecue Pool & Expense Review Bento -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Pool Progress -->
+<div class="lg:col-span-12 bg-surface-container p-10 rounded-xl relative overflow-hidden flex flex-col justify-between min-h-[500px]">
+<div class="relative z-10 space-y-2 text-center md:text-left">
+<h2 class="text-4xl font-serif font-bold">The Barbecue Pool</h2>
+<p class="font-sans text-sm uppercase tracking-widest text-primary">Treasury of the Roast</p>
+</div>
+<div class="relative flex-1 flex items-center justify-center py-12">
+<div class="relative w-full max-w-md aspect-square">
+<!-- Progress Cow Visual -->
+<div class="absolute inset-0 opacity-10">
+<img alt="Cow icon silhouette" class="w-full h-full object-contain grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlemnwCqjC5segtQyXjjFyYI58XAzhElBinW4gNXXuu4DHR_AOKuY9W-STV4jVDABwKqjYxrXGPSKDgQB8LxvlNWyVX85UF7hjYI0FwUcPs7ARV6WJR-joq9RMQFqv3FxMt80C736k9FXPkG8-a9rtn_4zbw2yiABR_x6v8zanPND3ljyoyH_mseqlYy0WO7G1E-oLIhMXgNwxnKqGC0S60L364V64iJr-y7Vo4s2fDnQ3RTdPkSvShRdZ79NvpQFSSTRNHK_ugZDY"/>
+</div>
+<!-- The liquid fill inline style will be driven by JS later -->
+<div class="absolute inset-0 liquid-fill" id="cow-fill" style="background: linear-gradient(to top, #d4af37 60%, transparent 60%);"></div>
+<!-- Mask overlay for better definition -->
+<div class="absolute inset-0 pointer-events-none mix-blend-overlay">
+<img alt="Cow icon detail" class="w-full h-full object-contain opacity-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyLoex900IZS-Rda19wM0_1cQhFK5sxDhSYMo5GwOD6ySqzjcgkvOtaZf2rak0QR9Bu-SGQLd5YHMxDR54SqnqL9dPyUJBwimhXRqku267JYiEwumgeOFYHpj8JnjmIfK8cFXS8-cqhHNu-l0zma6VkvanD0RU_Rfd6JODa_cRJW5fxwHhxPxdKEI7bszoUZh_4afJL0lYMee2PydP63HuKCCGfPwteCjI170Hf3j9sdjwKZMQTl0T_N7Uon93AXp2QFJ1qBEpvegY"/>
+</div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+<span class="text-7xl font-serif font-black text-on-primary-container" id="pool-percentage">60%</span>
+<p class="font-sans font-bold uppercase tracking-widest text-xs">Filled for the Feast</p>
+</div>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/30 pt-6 gap-6">
+<div class="text-center md:text-left">
+<p class="text-3xl font-serif">€<span id="pool-current">60</span> / €<span id="pool-target">100</span> <span class="text-sm font-sans uppercase tracking-tighter opacity-60">Collected</span></p>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Current Reserve vs Target Budget</p>
+</div>
+<button onclick="promptContribution()" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-md font-sans font-bold text-xs uppercase tracking-widest hover:shadow-xl transition-shadow w-full md:w-auto">Record Contribution</button>
+</div>
+</div>
+</section>
+</main>
+
+<!-- RSVP Modal (Hidden by default) -->
+<div id="rsvp-modal" class="fixed inset-0 z-[100] bg-stone-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface p-8 rounded-xl max-w-md w-full shadow-2xl space-y-6">
+        <h3 class="text-2xl font-serif font-bold text-primary">Join the Gathering</h3>
+        <p class="text-sm font-body text-on-surface-variant">Enter your name to attend the meeting on <span id="rsvp-date" class="font-bold text-on-surface"></span>.</p>
+        <input type="text" id="rsvp-name" placeholder="Your Name" class="w-full bg-surface-container-high border-none border-b-2 border-primary focus:ring-0 text-sm font-label p-3">
+        <div class="flex justify-end gap-4 pt-4">
+            <button onclick="closeRsvpModal()" class="px-4 py-2 text-xs font-bold uppercase tracking-widest text-outline">Cancel</button>
+            <button onclick="submitRsvp()" class="bg-primary text-on-primary px-6 py-2 rounded-md font-label text-xs font-bold uppercase tracking-widest">RSVP</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Basic Calendar Logic for UI
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let currentDate = new Date();
+
+function renderCalendar() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    document.getElementById('current-month-display').innerText = `${monthNames[month]} ${year}`;
+    
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
+    // Find the first Saturday
+    let firstSaturday = 1;
+    let tempDate = new Date(year, month, 1);
+    while (tempDate.getDay() !== 6) {
+        firstSaturday++;
+        tempDate.setDate(firstSaturday);
+    }
+
+    let html = '';
+    
+    // Header
+    dayNames.forEach(day => {
+        html += `<div class="bg-surface py-4 text-center text-xs font-bold uppercase tracking-widest text-on-surface-variant">${day}</div>`;
+    });
+    
+    // Empty days before start
+    for (let i = 0; i < firstDay; i++) {
+        html += `<div class="bg-surface h-24 md:h-32 p-4 opacity-10"></div>`;
+    }
+    
+    // Days
+    for (let day = 1; day <= daysInMonth; day++) {
+        const isFirstSaturday = (day === firstSaturday);
+        
+        if (isFirstSaturday) {
+            html += `
+            <div class="bg-surface-container-lowest h-24 md:h-32 p-2 relative group cursor-pointer border-2 border-primary/20 hover:border-primary transition-colors" onclick="openRsvpModal('${monthNames[month]} ${day}, ${year}')">
+                <span class="text-xs font-bold text-primary">${(day < 10 ? '0' : '') + day}</span>
+                <div class="mt-1">
+                    <span class="bg-primary text-white text-[9px] px-1 py-0.5 rounded uppercase font-bold">Meeting</span>
+                </div>
+                <div class="absolute inset-x-2 bottom-2 bg-primary text-white p-2 text-center rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <p class="font-sans font-bold text-[9px] uppercase tracking-tighter">Click to RSVP</p>
+                </div>
+            </div>`;
+        } else {
+            html += `<div class="bg-surface-container-lowest h-24 md:h-32 p-2 text-xs font-bold text-on-surface-variant/50">${(day < 10 ? '0' : '') + day}</div>`;
+        }
+    }
+    
+    document.getElementById('calendar-grid').innerHTML = html;
+}
+
+function changeMonth(delta) {
+    currentDate.setMonth(currentDate.getMonth() + delta);
+    renderCalendar();
+}
+
+function openRsvpModal(dateString) {
+    document.getElementById('rsvp-date').innerText = dateString;
+    document.getElementById('rsvp-modal').classList.remove('hidden');
+}
+
+function closeRsvpModal() {
+    document.getElementById('rsvp-modal').classList.add('hidden');
+    document.getElementById('rsvp-name').value = '';
+}
+
+function submitRsvp() {
+    const name = document.getElementById('rsvp-name').value;
+    if(!name) return alert("Please enter your name.");
+    // This will be hooked up to Google Sheets API
+    alert(`RSVP received for ${name}. This will be connected to the database in Phase 2.`);
+    closeRsvpModal();
+}
+
+function promptContribution() {
+    alert("Record contribution feature will be connected to the database in Phase 2.");
+}
+
+// Initialize
+renderCalendar();
+</script>

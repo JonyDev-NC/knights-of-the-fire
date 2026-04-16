@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "Knights of the Fire | The Illuminated Archive" }}</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d0c5af",
+                        "surface-bright": "#fbf9f5",
+                        "on-secondary-fixed-variant": "#51443a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface": "#fbf9f5",
+                        "outline": "#7f7663",
+                        "on-surface-variant": "#4d4635",
+                        "tertiary-fixed-dim": "#dcc497",
+                        "primary-container": "#d4af37",
+                        "on-secondary-container": "#706257",
+                        "surface-tint": "#735c00",
+                        "inverse-primary": "#e9c349",
+                        "primary": "#735c00",
+                        "primary-fixed": "#ffe088",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#f3dfd1",
+                        "primary-fixed-dim": "#e9c349",
+                        "inverse-on-surface": "#f2f0ed",
+                        "background": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#554300",
+                        "on-surface": "#1b1c1a",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-fixed": "#f9dfb1",
+                        "on-tertiary-container": "#534321",
+                        "on-tertiary-fixed-variant": "#554422",
+                        "on-background": "#1b1c1a",
+                        "secondary": "#6a5c51",
+                        "on-secondary-fixed": "#231a11",
+                        "secondary-fixed-dim": "#d6c3b6",
+                        "surface-container-high": "#eae8e4",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f5f3ef",
+                        "on-tertiary-fixed": "#261a00",
+                        "surface-container": "#efeeea",
+                        "surface-dim": "#dbdad6",
+                        "tertiary": "#6e5c37",
+                        "secondary-container": "#f3dfd1",
+                        "surface-variant": "#e4e2de",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e4e2de",
+                        "tertiary-container": "#c7b085"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #fbf9f5; }
+        h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .sigil-fill { font-variation-settings: 'FILL' 1; }
+        .liquid-fill {
+            background: linear-gradient(to top, #d4af37 65%, transparent 65%);
+            -webkit-mask-image: url('image-8');
+            mask-image: url('image-8');
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+</body>
+</html>

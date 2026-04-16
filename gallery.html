@@ -1,0 +1,139 @@
+---
+layout: default
+title: Gallery | Knights of the Fire
+---
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20 text-center">
+<p class="text-primary font-label font-medium uppercase tracking-[0.3em] text-xs mb-4">The Illuminated Archive</p>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">Gallery</h1>
+<div class="w-24 h-1 bg-primary-container mx-auto mb-8"></div>
+<p class="max-w-2xl mx-auto text-on-surface-variant font-body leading-relaxed">A digital chronicle of our brotherhood. Every frame captures a moment of fellowship, fire, and the pursuit of scholarly virtue.</p>
+</section>
+
+<!-- Bento Grid Gallery -->
+<section class="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-6 mb-32">
+<!-- Large Focus -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0002.jpg" alt="Gallery item" />
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="text-white text-xl font-serif">The Brotherhood Formed</h3>
+</div>
+</div>
+<!-- Tall Vertical -->
+<div class="md:col-span-1 md:row-span-2 relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ site.baseurl }}/assets/images/IMG-20260316-WA0002.jpg" alt="Gallery item" />
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="text-white text-lg font-serif">Relics of the Archive</h3>
+</div>
+</div>
+<!-- Square 1 -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ site.baseurl }}/assets/images/IMG-20260301-WA0000.jpg" alt="Gallery item" />
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="text-white text-lg font-serif">Round Table Insights</h3>
+</div>
+</div>
+<!-- Square 2 -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0000.jpg" alt="Gallery item" />
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<h3 class="text-white text-lg font-serif">Feast of Embers</h3>
+</div>
+</div>
+</section>
+
+<!-- Content Split: Secondary Imagery & Memories -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Memory Feed (Comments) -->
+<div class="lg:col-span-7 space-y-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-bold font-serif">Shared Memories</h2>
+</div>
+
+<!-- Comments Section (will be populated by JS) -->
+<div id="gallery-comments-container" class="space-y-8">
+    <p class="text-xs font-label uppercase tracking-widest text-outline text-center">Loading reflections from the archive...</p>
+</div>
+
+<!-- Comment Input Area -->
+<div class="mt-16 bg-surface-container p-8 rounded-lg">
+<h4 class="text-sm font-bold uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span> Add to the Archive
+</h4>
+<input type="text" id="memory-name" placeholder="Your Name" class="w-full bg-surface-container-high border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 text-sm p-4 mb-4 font-body">
+<textarea id="memory-content" class="w-full bg-surface-container-high border-none border-b-2 border-primary/20 focus:border-primary focus:ring-0 text-sm p-4 h-32 mb-6 placeholder:text-outline/50 placeholder:uppercase placeholder:text-[10px] transition-colors" placeholder="Type your transcription here..."></textarea>
+<div class="flex justify-end">
+<button onclick="submitMemory()" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-3 rounded-md text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+    Submit Memory
+</button>
+</div>
+</div>
+
+</div>
+
+<!-- Right: Contextual Info & Small Grid -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 space-y-12">
+<!-- Statistics/Sigil Badge -->
+<div class="bg-tertiary-container/30 p-8 rounded-sm border-l-4 border-primary">
+<h4 class="font-serif text-xl mb-2 text-on-tertiary-container">The Archivist's Note</h4>
+<p class="text-xs text-on-tertiary-container/80 leading-loose">
+    All visual records are protected under the sacred vows of the Knights of the Fire. Sharing outside the forge is permitted only for the purposes of inspiration and truth.
+</p>
+</div>
+<!-- Minor Gallery Cluster -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0001.jpg" />
+</div>
+<div class="bg-surface-container-highest aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0003.jpg" />
+</div>
+<div class="bg-surface-container-highest aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0004.jpg" />
+</div>
+<div class="bg-surface-container-highest aspect-square rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" src="{{ site.baseurl }}/assets/images/IMG-20260411-WA0007.jpg" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<script>
+function submitMemory() {
+    const name = document.getElementById('memory-name').value;
+    const content = document.getElementById('memory-content').value;
+    if(!name || !content) return alert("Please provide both name and your transcription.");
+    
+    // Will be sent to Google Sheets
+    alert(`Thank you, ${name}. Your memory reflection has been captured (Phase 2 integration pending).`);
+    document.getElementById('memory-content').value = '';
+}
+
+// Temporary placeholder comments code
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('gallery-comments-container').innerHTML = `
+        <div class="group">
+        <div class="flex gap-6">
+        <div class="flex-shrink-0">
+        <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-sm">
+        <span class="material-symbols-outlined text-2xl" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+        </div>
+        </div>
+        <div class="flex-grow">
+        <div class="flex items-baseline justify-between mb-2">
+        <h4 class="font-bold text-on-surface tracking-tight uppercase text-sm">Knight Galahad</h4>
+        <span class="text-[10px] text-outline tracking-tighter uppercase">3 Days Ago</span>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed text-sm bg-surface-container-low p-5 rounded-lg">
+            The warmth of that fire still resonates. A true testament to the strength found in our shared silence and the golden glow of the hearth.
+        </p>
+        </div>
+        </div>
+        </div>
+    `;
+});
+</script>

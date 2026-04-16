@@ -1,0 +1,64 @@
+---
+layout: default
+title: The Forge | Knights of the Fire
+---
+<main class="pt-24 pb-20">
+<!-- Hero Header -->
+<header class="max-w-7xl mx-auto px-8 py-16 text-center">
+<span class="text-primary font-label font-semibold tracking-widest uppercase text-xs mb-4 block">Volume IV • The Chronicles</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-6">The Forge</h1>
+<div class="h-px w-24 bg-primary-container mx-auto"></div>
+<p class="mt-8 max-w-2xl mx-auto text-on-surface-variant font-body leading-relaxed">
+    An archive of rigorous masculine inquiry, dedicated to the refinement of character through the heat of philosophical and spiritual fire.
+</p>
+</header>
+
+<!-- Featured Section: Bento Grid Layout -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+
+<!-- Loop through posts -->
+{% for post in site.posts limit:4 %}
+  {% if forloop.index == 1 %}
+    <!-- Main Featured Article -->
+    <article class="md:col-span-8 group cursor-pointer" onclick="window.location='{{ site.baseurl }}{{ post.url }}'">
+    <div class="relative aspect-[16/9] overflow-hidden bg-surface-container-low mb-6">
+    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}">
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent"></div>
+    </div>
+    <div class="flex flex-col space-y-4">
+    <div class="flex items-center gap-2">
+    <span class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold tracking-tighter uppercase rounded-sm">Manifesto</span>
+    <span class="text-xs font-label text-outline uppercase tracking-widest">{{ post.date | date: "%B %d, %Y" }}</span>
+    </div>
+    <h2 class="text-4xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-tight">{{ post.title }}</h2>
+    <p class="text-on-surface-variant font-body leading-relaxed line-clamp-3">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+    </p>
+    <a class="text-primary font-label font-bold uppercase text-xs tracking-widest flex items-center gap-2" href="{{ site.baseurl }}{{ post.url }}">
+        Read Full Manuscript
+        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+    </a>
+    </div>
+    </article>
+    <aside class="md:col-span-4 flex flex-col gap-8">
+  {% else %}
+    <!-- Secondary Article -->
+    <article class="bg-surface-container-lowest p-8 border-b-4 border-primary-container transition-all hover:bg-white group cursor-pointer" onclick="window.location='{{ site.baseurl }}{{ post.url }}'">
+    <span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-3 block">Chronicle</span>
+    <h3 class="text-2xl font-headline font-bold text-on-surface mb-4 leading-snug group-hover:text-primary transition-colors">{{ post.title }}</h3>
+    <p class="text-sm text-on-surface-variant font-body leading-relaxed mb-6">
+        {{ post.excerpt | strip_html | truncatewords: 20 }}
+    </p>
+    <div class="flex items-center justify-between">
+    <span class="text-[10px] font-label text-outline uppercase">{{ post.date | date: "%B %d, %Y" }}</span>
+    <span class="material-symbols-outlined text-primary-container" data-icon="menu_book">menu_book</span>
+    </div>
+    </article>
+  {% endif %}
+  {% if forloop.last and forloop.index > 1 %}
+    </aside>
+  {% endif %}
+{% endfor %}
+
+</section>
+</main>
