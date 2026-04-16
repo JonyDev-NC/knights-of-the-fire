@@ -1,7 +1,7 @@
 name: Knights of the Fire
 description: The Illuminated Archive
-url: "" 
-baseurl: ""
+url: "https://jonydev-nc.github.io" 
+baseurl: "/knights-of-the-fire"
 timezone: UTC
 
 # Collections
