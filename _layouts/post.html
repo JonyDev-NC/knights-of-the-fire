@@ -2,95 +2,85 @@
 layout: default
 ---
 <main class="pt-24 pb-20">
-<!-- Hero Header -->
+
 <header class="max-w-7xl mx-auto px-8 py-16 text-center">
-<span class="text-primary font-label font-semibold tracking-widest uppercase text-xs mb-4 block">The Chronicles</span>
+<span class="text-primary font-label font-semibold tracking-widest uppercase text-xs mb-4 block" data-i18n="post_chronicles">The Chronicles</span>
 <h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-surface mb-6">{{ page.title }}</h1>
 <div class="h-px w-24 bg-primary-container mx-auto"></div>
 </header>
 
-<!-- Article Content / Scholarly Layout -->
 <section class="max-w-4xl mx-auto px-8">
 {% if page.image %}
 <div class="relative aspect-[16/9] overflow-hidden bg-surface-container-low mb-12 rounded-lg">
-    <img class="w-full h-full object-cover" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+<img class="w-full h-full object-cover" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
 </div>
 {% endif %}
 
 <div class="flex items-center gap-4 mb-12 py-8 border-y border-outline-variant/20">
 <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-primary sigil-fill" data-icon="shield">shield</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">shield</span>
 </div>
 <div>
-<p class="text-xs font-label uppercase tracking-widest text-primary font-bold">The Archive</p>
-<p class="text-xs text-outline font-body">Gemini Intelligence & Brothers Reflections</p>
+<p class="text-xs font-label uppercase tracking-widest text-primary font-bold" data-i18n="post_author_name">The Archive</p>
+<p class="text-xs text-outline font-body" data-i18n="post_author_role">Gemini Intelligence & Brothers' Reflections</p>
 </div>
 <div class="ml-auto text-xs text-outline-variant font-label uppercase">{{ page.date | date: "%b %d, %Y" }}</div>
 </div>
 
 <div class="prose prose-stone prose-lg max-w-none font-body text-on-surface">
-    {{ content }}
+{{ content }}
 </div>
 </section>
 
-<!-- Comments Section (Symbolic Avatars) -->
+<!-- Comments / Discourse -->
 <section class="max-w-4xl mx-auto px-8 mt-24">
 <div class="flex items-center gap-4 mb-12">
-<h3 class="text-2xl font-headline font-bold text-on-surface">Discourse</h3>
+<h3 class="text-2xl font-headline font-bold text-on-surface" data-i18n="discourse_title">Discourse</h3>
 <span class="h-px flex-grow bg-outline-variant/30"></span>
 </div>
-<div class="space-y-12">
 
-<!-- Placeholder Comments (JS will load real ones) -->
-<div id="comments-container" class="space-y-8">
-    <p class="text-xs font-label uppercase tracking-widest text-outline text-center">Loading reflections from the archive...</p>
+<div id="post-comments" class="space-y-8 mb-16">
+<p class="text-xs font-label uppercase tracking-widest text-outline text-center" data-i18n="loading">Loading reflections from the archive...</p>
 </div>
 
-<!-- Comment Input -->
 <div class="pt-8 border-t border-outline-variant/10">
 <div class="flex gap-6">
 <div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center">
-<span class="material-symbols-outlined text-outline" data-icon="add">add</span>
+<span class="material-symbols-outlined text-outline">add</span>
 </div>
 <div class="flex-grow">
-<input type="text" id="comment-name" placeholder="Your Name" class="w-full bg-surface-container-low border-none border-b-2 border-primary focus:ring-0 text-sm font-label p-3 mb-4">
-<textarea id="comment-content" class="w-full bg-surface-container-low border-none border-b-2 border-primary focus:ring-0 text-sm font-body p-4 min-h-[100px]" placeholder="Add to the discourse..."></textarea>
+<input type="text" id="comment-name" data-i18n-ph="discourse_name_ph" placeholder="Your Name" class="w-full bg-surface-container-low border-none border-b-2 border-primary focus:ring-0 text-sm font-label p-3 mb-4">
+<textarea id="comment-content" data-i18n-ph="discourse_content_ph" class="w-full bg-surface-container-low border-none border-b-2 border-primary focus:ring-0 text-sm font-body p-4 min-h-[100px]" placeholder="Add to the discourse..."></textarea>
 <div class="mt-4 flex justify-end">
-<button onclick="submitComment()" class="bg-primary text-on-primary px-8 py-3 rounded-md font-label text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">Submit Manuscript</button>
+<button onclick="submitComment()" class="bg-primary text-on-primary px-8 py-3 rounded-md font-label text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity" data-i18n="discourse_submit">Submit Manuscript</button>
 </div>
 </div>
 </div>
-</div>
-
 </div>
 </section>
 </main>
 
 <script>
+var POST_PAGE_ID = '{{ page.url }}';
+
 function submitComment() {
-    const name = document.getElementById('comment-name').value;
-    const content = document.getElementById('comment-content').value;
-    if(!name || !content) return alert("Both name and comment are required.");
-    alert(`Thank you ${name}. Your comment has been recorded (Phase 2 integration pending).`);
-    document.getElementById('comment-content').value = "";
+    var name = document.getElementById('comment-name').value.trim();
+    var content = document.getElementById('comment-content').value.trim();
+    var t = KOTF.t;
+    if (!name || !content) { alert(t('discourse_error')); return; }
+    KOTF.sheets.submitComment(POST_PAGE_ID, name, content).then(function() {
+        alert(t('discourse_success'));
+        document.getElementById('comment-content').value = '';
+        document.getElementById('comment-name').value = '';
+        loadPostComments();
+    });
 }
 
-// Simulated data load
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('comments-container').innerHTML = `
-        <div class="flex gap-6">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-        <span class="material-symbols-outlined text-primary sigil-fill" data-icon="person">person</span>
-        </div>
-        <div class="flex-grow">
-        <div class="flex items-center gap-3 mb-2">
-        <span class="text-sm font-label font-bold text-on-surface">Cavalier 99</span>
-        </div>
-        <p class="text-on-surface-variant font-body text-sm leading-relaxed">
-            Excellent reflection. We will carry this into the next gathering.
-        </p>
-        </div>
-        </div>
-    `;
-});
+function loadPostComments() {
+    KOTF.sheets.loadComments(POST_PAGE_ID).then(function(comments) {
+        KOTF.sheets.renderComments(comments, 'post-comments');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadPostComments);
 </script>
